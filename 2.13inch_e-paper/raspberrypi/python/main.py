@@ -37,7 +37,7 @@ def main():
     # For simplicity, the arguments are explicit numerical coordinates
     image = Image.new('1', (epd2in13.EPD_WIDTH, epd2in13.EPD_HEIGHT), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 12)
+    font = ImageFont.truetype("arial.ttf", 12)
     draw.rectangle((0, 10, 128, 30), fill = 0)
     draw.text((30, 14), 'Hello world!', font = font, fill = 255)
     draw.text((30, 36), 'e-Paper Demo', font = font, fill = 0)
@@ -73,7 +73,7 @@ def main():
 
     time_image = Image.new('1', (96, 32), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(time_image)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 32)
+    font = ImageFont.truetype("arial.ttf", 32)
     image_width, image_height  = time_image.size
     while (True):
         # draw a rectangle to clear the image
